@@ -1,0 +1,87 @@
+
+/* Светлая тема (по умолчанию) */
+[data-theme="light"] {
+    --bg-primary: #F8F9FA;
+    --bg-secondary: #FFFFFF;
+    --bg-tertiary: #E9ECEF;
+    --bg-hover: #F1F3F5;
+    --text-primary: #212529;
+    --text-secondary: #6C757D;
+    --text-muted: #ADB5BD;
+    --border-color: #DEE2E6;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.15);
+    --card-bg: #FFFFFF;
+    --input-bg: #FFFFFF;
+    --input-border: #DEE2E6;
+    --modal-overlay: rgba(0, 0, 0, 0.5);
+    
+    --category-general: #6C757D;
+    --category-work: #4A90E2;
+    --category-personal: #28A745;
+    --category-health: #DC3545;
+    --category-study: #FFC107;
+    --category-finance: #9B59B6;
+    
+    --priority-low: #28A745;
+    --priority-medium: #FFC107;
+    --priority-high: #FD7E14;
+    --priority-urgent: #DC3545;
+}
+
+/* Темная тема */
+[data-theme="dark"] {
+    --bg-primary: #1a1a2e;
+    --bg-secondary: #16213e;
+    --bg-tertiary: #0f3460;
+    --bg-hover: #1a1a3e;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0b0;
+    --text-muted: #6c6c80;
+    --border-color: #2a2a4a;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --card-bg: #16213e;
+    --input-bg: #0f3460;
+    --input-border: #2a2a4a;
+    --modal-overlay: rgba(0, 0, 0, 0.7);
+    
+    /* Категории (более яркие для темной темы) */
+    --category-general: #8E8E9A;
+    --category-work: #5B9BD5;
+    --category-personal: #4CAF50;
+    --category-health: #EF5350;
+    --category-study: #FFD54F;
+    --category-finance: #BA68C8;
+    
+    /* Приоритеты (более яркие) */
+    --priority-low: #4CAF50;
+    --priority-medium: #FFD54F;
+    --priority-high: #FF9800;
+    --priority-urgent: #EF5350;
+}
+
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-toggle {
+    background: transparent;
+    border: 2px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: var(--bg-hover);
+}
+
+[data-theme="dark"] .theme-toggle i {
+    transform: rotate(180deg);
+}
